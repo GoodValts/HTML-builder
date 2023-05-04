@@ -1,7 +1,8 @@
-console.log('test test');
-/*
+const fs = require('fs');
 const path = require('node:path');
 
-path.win32.basename('/01-read-file/text.txt');
+const pathToTxt = path.join(__dirname, 'text.txt');
 
-console.log(path.win32.basename('/01-read-file/text.txt'));*/
+const result = fs.ReadStream(pathToTxt, 'utf-8');
+
+result.on('data', data => console.log(data));
