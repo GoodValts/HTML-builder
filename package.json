@@ -9,7 +9,13 @@
     "node 03-files-in-folder": "node index.js",
     "node 04-copy-directory": "node index.js",
     "node 05-merge-styles": "node index.js",
-    "node 06-build-page": "node index.js"
+    "node 06-build-page": "node index.js",
+    "1": "node 01-read-file",
+    "2": "node 02-write-file",
+    "3": "node 03-files-in-folder",
+    "4": "node 04-copy-directory",
+    "5": "node 05-merge-styles",
+    "6": "node 06-build-page"
   },
   "author": "evgeniimal",
   "license": "ISC",
