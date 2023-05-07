@@ -39,13 +39,13 @@ fs.rm(path.join(__dirname, '\\project-dist'), { recursive:true, force:true }, er
                       if (err) {
                         throw err;
                       } else {
-                        fs.readdir(path.join(__dirname, '\\style'), { withFileTypes: true }, (err, files) => {
+                        fs.readdir(path.join(__dirname, '\\styles'), { withFileTypes: true }, (err, files) => {
                           if (err) {
                             throw err;
                           } else {
                             for (let i = 0; i < files.length; i += 1) {
                               let fileExtension = files[i].name.slice(files[i].name.lastIndexOf('.'));
-                              let pathToStyle = path.join(__dirname, '\\style') + '\\' + files[i].name;
+                              let pathToStyle = path.join(__dirname, '\\styles') + '\\' + files[i].name;
                               if (fileExtension === '.css') {
                                 fs.readFile(pathToStyle, 'utf-8', (err, data) => {
                                   if (err) {
