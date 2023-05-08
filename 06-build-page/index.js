@@ -66,11 +66,12 @@ fs.rm(path.join(__dirname, '\\project-dist'), { recursive:true, force:true }, er
                               } else {
                                 arr = findValues(data, arr);
                                 for (let i=0; i<arr.length; i += 1) {
+                                  console.log(arr[i]);
                                   fs.readdir(path.join(__dirname, '\\components'), {withFileTypes: true}, (err, files) => {
                                     if (err) {
                                       throw err;
                                     } else {
-                                      for (let x=0; x<arr.length; x += 1) {
+                                      for (let x=0; x<files.length; x += 1) {
                                         if (files[x].name.slice(0, -5) === arr[i]) {
                                           fs.readFile(path.join(__dirname, '\\components\\', files[x].name), 'utf-8', (err, value) => {
                                             if (err) {
